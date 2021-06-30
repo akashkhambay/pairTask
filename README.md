@@ -1,0 +1,1 @@
+Hi, please find in the other files, mine and Rafika's google homepage with a logo, searchbar, 3 buttons, all functioning with a fetch api, linked to a text file, and a json file which will give you a statement, foodlist (10 items) and a random food item, respectively. # pairTask
