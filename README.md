@@ -3,3 +3,5 @@ Hi, please find in the other files, mine and Rafika's google homepage with a log
 This is our backup fetch API we decided to go with as our main one couldn't function in the way we had intended it to, it had a working search bar but the buttons didn't function properly.
 
 Due to time contraints we could not troubleshoot to much avail, so we are going to present the backup, which is simpler and satisfies the requirements of the task.
+
+We will be happy to show you our original code if you are interested :).
