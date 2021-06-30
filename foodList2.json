@@ -1,0 +1,12 @@
+[
+    {"id":1, "name": "Korean Fried Chicken"},
+    {"id":2, "name": "Pancakes"},
+    {"id":3, "name": "Hot dog"},
+    {"id":4, "name": "Pizza"},
+    {"id":5, "name": "Lobster Risotto"},
+    {"id":6, "name": "Burger"},
+    {"id":7, "name": "Steak"},
+    {"id":8, "name": "Fajitas"},
+    {"id":9, "name": "Buritto"},
+    {"id":10, "name": "Spaghetti"}
+]

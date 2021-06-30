@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Google RA API</title>
+</head>
+
+<!-- Here in the body tag you can see we have added the google logo as a h1 header and have put the corresponding searchbar and functional buttons as required by the task. -->
+
+<body>
+    <h1>
+        <span style="color:#006eff">G</span>
+        <span style="color:#c42727">o</span>
+        <span style="color:#e6d32d">o</span>
+        <span style="color:#2c77cc">g</span>
+        <span style="color:#1c5a3b">l</span>
+        <span style="color:#d12020">e</span>
+    </h1>
+    <input id="searchbar" type="text" placeholder="search input here">
+    <br>
+    <br>
+
+    <button id = 'getStatement'>Click me for info</button>
+    <button id="getFood">Click to get Food list</button>
+    <button id="getRndFood">I'm Feeling Lucky</button>
+
+    <div id="output"></div>
+    <script>
+
+// Created 3 event listeners that will listen for clicks and carry out the functions defined below, this will add functionality to the buttons we made and allow them to carry out the operation we reuire them to carry out
+
+        document.getElementById('getStatement').addEventListener('click', getStatement);
+        document.getElementById('getFood').addEventListener('click', getFood);
+        document.getElementById('getRndFood').addEventListener('click', getRndFood);
+
+// Created a fetch API to get the food list data, utilises the fetch to get the json objects and then prints it to the browser when the respective button is pressed
+
+        function getStatement(){
+            fetch('food.txt')
+            .then((res) => res.text())
+            .then((data) => {
+                document.getElementById('output').innerHTML = data;
+            })
+            }
+
+
+
+        function getFood(){
+            fetch('foodList2.json')
+            .then((res) => res.json())
+            .then((data) => {
+                let foodOutput = '<h2>10 Lovely Dishes</h2>';
+                data.forEach(function(food){
+                    foodOutput += `
+                    <ul>
+                        <li>ID: ${food.id}</li>
+                        <li>Dish: ${food.name}</li>
+                    </ul>    
+                    `;
+                });
+                document.getElementById('output').innerHTML = foodOutput;
+            })
+        }
+        function getRndFood(){
+            document.getElementById('output').innerHTML = 'Korean Fried Chicken'
+            };
+    </script>
+    
+</body>
+<!-- If you would like to clear the webpage just refresh the page, tried to get the search bar to give some results but I got too caught up with doing the wrong thing yesterday so didn't get time to do it!. -->
+</html>
